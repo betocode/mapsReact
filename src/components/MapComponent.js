@@ -1,22 +1,21 @@
 import {
   DistanceMatrixService,
   GoogleMap,
-  LoadScript,
-  Marker,
   LoadScriptNext,
+  Marker,
 } from "@react-google-maps/api";
-import styled from "styled-components";
+import React, { useMemo, useState } from "react";
 import {
   Button,
   Dropdown,
-  DropdownToggle,
-  DropdownMenu,
   DropdownItem,
-  InputGroup,
+  DropdownMenu,
+  DropdownToggle,
   Input,
+  InputGroup,
   Label,
 } from "reactstrap";
-import React, { useState, useMemo } from "react";
+import styled from "styled-components";
 
 const dropDownObj = [
   {

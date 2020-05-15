@@ -71,7 +71,7 @@ export const validateUser = () => async (dispatch) => {
 export const createUser = (input) => async (dispatch) => {
   dispatch(uiStartLoading());
   try {
-    const { data } = await api.post("/register", input);
+    await api.post("/register", input);
   } catch (error) {
     throw Error;
   } finally {

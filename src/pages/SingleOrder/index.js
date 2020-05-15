@@ -1,9 +1,9 @@
-import React, { useEffect, useState, useMemo } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Spinner } from "reactstrap";
 import { MapComponent } from "../../components";
 import { fetchSingleOrder } from "../../ducks";
 import { SpinnerContainer } from "./styles";
-import { Spinner } from "reactstrap";
 
 const Index = (props) => {
   const dispatch = useDispatch();
@@ -24,7 +24,7 @@ const Index = (props) => {
     };
 
     fetchOrder();
-  }, []);
+  }, [dispatch, props.match.params.id]);
 
   useEffect(() => {
     let arr = [];

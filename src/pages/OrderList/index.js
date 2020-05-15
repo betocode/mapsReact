@@ -16,7 +16,7 @@ const Index = () => {
       await dispatch(fetchOrders());
     };
     fetchOrdersAsync();
-  }, []);
+  }, [dispatch]);
 
   if (isLoading) {
     return (

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { MapComponent } from "../../components";
-import { uiOpenDialog, uiCloseDialog, createOrder } from "../../ducks";
-import { useDispatch, useSelector } from "react-redux";
 import moment from "moment";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Spinner } from "reactstrap";
+import { MapComponent } from "../../components";
+import { createOrder, uiOpenDialog } from "../../ducks";
 import { SpinnerContainer } from "./styles";
 
 const Index = (props) => {

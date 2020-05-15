@@ -36,7 +36,7 @@ export default reducer;
 export const createOrder = (input) => async (dispatch) => {
   dispatch(uiStartLoading());
   try {
-    const { data } = await api.post("/order", input);
+    await api.post("/order", input);
   } catch (error) {
   } finally {
     dispatch(uiStopLoading());

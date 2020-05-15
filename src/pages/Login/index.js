@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { LoginBg, LoginContainer, ButtonContainer } from "./styles";
-import { Button, Form, FormGroup, Input, Spinner } from "reactstrap";
-import { authUser, uiOpenDialog, createUser } from "../../ducks";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Button, Form, FormGroup, Input, Spinner } from "reactstrap";
+import { authUser, createUser, uiOpenDialog } from "../../ducks";
+import { ButtonContainer, LoginBg, LoginContainer } from "./styles";
 
 const submitEnum = {
   1: "Login",
@@ -20,7 +20,7 @@ const Index = (props) => {
     if (!!auth) {
       props.history.push("/order-list");
     }
-  }, []);
+  }, [dispatch, props.history]);
 
   const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });

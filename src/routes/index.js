@@ -1,20 +1,20 @@
 import React, { useLayoutEffect } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Login from "../pages/Login";
-import OrderList from "../pages/OrderList";
-import Order from "../pages/Order";
-import SingleOrder from "../pages/SingleOrder";
-import ProtectedRoute from "../Hoc/ProtectedRoute";
-import { ModalCustom, NavbarCustom } from "../components";
 import { useDispatch } from "react-redux";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { ModalCustom, NavbarCustom } from "../components";
 import { validateUser } from "../ducks";
+import ProtectedRoute from "../Hoc/ProtectedRoute";
+import Login from "../pages/Login";
+import Order from "../pages/Order";
+import OrderList from "../pages/OrderList";
+import SingleOrder from "../pages/SingleOrder";
 
 const Index = () => {
   const dispatch = useDispatch();
 
   useLayoutEffect(() => {
     dispatch(validateUser());
-  }, []);
+  }, [dispatch]);
 
   return (
     <>
