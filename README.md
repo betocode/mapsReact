@@ -5,7 +5,7 @@ Na pasta root do projeto,instale as dependencias utilizando npm install e para i
 
 
 
-### `Bibliotecas usadas no projeto`
+### `Dependências utilizadas no projeto`
 
 - ReactJS
 - Redux
